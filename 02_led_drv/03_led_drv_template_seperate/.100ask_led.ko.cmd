@@ -1,0 +1,1 @@
+cmd_/linux/drive/02_led_drv/03_led_drv_template_seperate/100ask_led.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /linux/drive/02_led_drv/03_led_drv_template_seperate/100ask_led.ko /linux/drive/02_led_drv/03_led_drv_template_seperate/100ask_led.o /linux/drive/02_led_drv/03_led_drv_template_seperate/100ask_led.mod.o ;  true

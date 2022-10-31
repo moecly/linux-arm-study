@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../bsp/imx-linux4.9.88"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.json": "cpp",
+			"*.ejs": "html",
+			"": "",
+			"string.h": "c",
+			"bitops.h": "c"
+		}
+	}
+}

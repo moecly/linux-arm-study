@@ -1,0 +1,1 @@
+cmd_/linux/drive/02_led_drv/04_led_drv_template_bus_dev_drv/leddrv.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /linux/drive/02_led_drv/04_led_drv_template_bus_dev_drv/leddrv.ko /linux/drive/02_led_drv/04_led_drv_template_bus_dev_drv/leddrv.o /linux/drive/02_led_drv/04_led_drv_template_bus_dev_drv/leddrv.mod.o ;  true

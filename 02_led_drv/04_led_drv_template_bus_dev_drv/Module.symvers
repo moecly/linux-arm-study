@@ -1,0 +1,2 @@
+0xc1e817c1	led_class_destory_dev	/linux/drive/02_led_drv/04_led_drv_template_bus_dev_drv/leddrv	EXPORT_SYMBOL
+0x4a2c9e06	led_class_create_dev	/linux/drive/02_led_drv/04_led_drv_template_bus_dev_drv/leddrv	EXPORT_SYMBOL

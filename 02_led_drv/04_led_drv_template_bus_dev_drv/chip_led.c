@@ -90,7 +90,7 @@ int led_drv_remove(struct platform_device *dev) {
     if (!res)
       break;
 
-    led_class_destory_dev(i);
+    led_class_destroy_dev(i);
     g_led_cnt--;
   }
 

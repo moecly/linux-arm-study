@@ -41,7 +41,7 @@ void led_class_create_dev(int minor) {
 /**
  * destory led dev
  */
-void led_class_destory_dev(int minor) {
+void led_class_destroy_dev(int minor) {
   device_destroy(led_class, MKDEV(major, minor));
 }
 
@@ -52,7 +52,7 @@ void register_led_operations(p_led_operations p_ops) { p_led_ops = p_ops; }
 
 /* ko文件需要引用，需导出 */
 EXPORT_SYMBOL(led_class_create_dev);
-EXPORT_SYMBOL(led_class_destory_dev);
+EXPORT_SYMBOL(led_class_destroy_dev);
 EXPORT_SYMBOL(register_led_operations);
 
 /**

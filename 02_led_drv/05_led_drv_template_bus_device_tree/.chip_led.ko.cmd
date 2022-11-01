@@ -1,0 +1,1 @@
+cmd_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.ko /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.mod.o ;  true

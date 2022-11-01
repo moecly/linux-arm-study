@@ -1,0 +1,8 @@
+#define GRUOP_PIN(g, p)     ((g << 16) | p)
+
+/ {
+    led@0 {
+        compatible = "imx6ull, led_drv";
+        pin = <GRUOP_PIN(5, 3)>;
+    };
+};

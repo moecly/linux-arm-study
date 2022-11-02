@@ -1,8 +1,8 @@
-cmd_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o := arm-linux-gnueabihf-gcc -Wp,-MD,/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/.chip_led.o.d -nostdinc -isystem /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include -I./arch/arm/include -I./arch/arm/include/generated/uapi -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types  -DMODULE  -DKBUILD_BASENAME='"chip_led"'  -DKBUILD_MODNAME='"chip_led"' -c -o /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/.tmp_chip_led.o /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.c
+cmd_/linux/drive/04_button/button_fdrv.o := arm-linux-gnueabihf-gcc -Wp,-MD,/linux/drive/04_button/.button_fdrv.o.d -nostdinc -isystem /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include -I./arch/arm/include -I./arch/arm/include/generated/uapi -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types  -DMODULE  -DKBUILD_BASENAME='"button_fdrv"'  -DKBUILD_MODNAME='"button_fdrv"' -c -o /linux/drive/04_button/.tmp_button_fdrv.o /linux/drive/04_button/button_fdrv.c
 
-source_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o := /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.c
+source_/linux/drive/04_button/button_fdrv.o := /linux/drive/04_button/button_fdrv.c
 
-deps_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o := \
+deps_/linux/drive/04_button/button_fdrv.o := \
   include/linux/device.h \
     $(wildcard include/config/debug/devres.h) \
     $(wildcard include/config/srcu.h) \
@@ -684,12 +684,6 @@ deps_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o := \
     $(wildcard include/config/have/mod/arch/specific.h) \
     $(wildcard include/config/modules/use/elf/rel.h) \
     $(wildcard include/config/modules/use/elf/rela.h) \
-  include/linux/platform_device.h \
-    $(wildcard include/config/suspend.h) \
-    $(wildcard include/config/hibernate/callbacks.h) \
-  include/linux/mod_devicetable.h \
-  include/linux/uuid.h \
-  include/uapi/linux/uuid.h \
   include/linux/proc_fs.h \
   include/linux/tty.h \
     $(wildcard include/config/tty.h) \
@@ -715,44 +709,9 @@ deps_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o := \
   include/linux/tty_ldisc.h \
   include/uapi/linux/tty_flags.h \
   include/uapi/linux/tty.h \
-  include/linux/of.h \
-    $(wildcard include/config/sparc.h) \
-    $(wildcard include/config/of/dynamic.h) \
-    $(wildcard include/config/attach/node.h) \
-    $(wildcard include/config/detach/node.h) \
-    $(wildcard include/config/add/property.h) \
-    $(wildcard include/config/remove/property.h) \
-    $(wildcard include/config/update/property.h) \
-    $(wildcard include/config/of/numa.h) \
-    $(wildcard include/config/no/change.h) \
-    $(wildcard include/config/change/add.h) \
-    $(wildcard include/config/change/remove.h) \
-    $(wildcard include/config/of/resolve.h) \
-    $(wildcard include/config/of/overlay.h) \
-  include/linux/property.h \
-  include/linux/fwnode.h \
-  arch/arm/include/asm/io.h \
-    $(wildcard include/config/pci.h) \
-    $(wildcard include/config/need/mach/io/h.h) \
-    $(wildcard include/config/pcmcia/soc/common.h) \
-    $(wildcard include/config/isa.h) \
-    $(wildcard include/config/pccard.h) \
-  include/asm-generic/pci_iomap.h \
-    $(wildcard include/config/no/generic/pci/ioport/map.h) \
-    $(wildcard include/config/generic/pci/iomap.h) \
-  include/xen/xen.h \
-    $(wildcard include/config/xen.h) \
-    $(wildcard include/config/xen/dom0.h) \
-    $(wildcard include/config/xen/pvh.h) \
-  include/asm-generic/io.h \
-    $(wildcard include/config/generic/iomap.h) \
-    $(wildcard include/config/has/ioport/map.h) \
-    $(wildcard include/config/virt/to/bus.h) \
-  include/linux/vmalloc.h \
-  /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/led_ops.h \
-  /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/led_resource.h \
-  /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/leddrv.h \
+  /linux/drive/04_button/button_drv.h \
+  /linux/drive/04_button/button_fdrv.h \
 
-/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o: $(deps_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o)
+/linux/drive/04_button/button_fdrv.o: $(deps_/linux/drive/04_button/button_fdrv.o)
 
-$(deps_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o):
+$(deps_/linux/drive/04_button/button_fdrv.o):

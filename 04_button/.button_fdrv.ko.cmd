@@ -1,0 +1,1 @@
+cmd_/linux/drive/04_button/button_fdrv.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /linux/drive/04_button/button_fdrv.ko /linux/drive/04_button/button_fdrv.o /linux/drive/04_button/button_fdrv.mod.o ;  true

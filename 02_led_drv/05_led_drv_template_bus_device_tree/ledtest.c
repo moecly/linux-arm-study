@@ -5,6 +5,18 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+void delay_ms(unsigned int t) {
+  unsigned int i = 0;
+  for (; i < t; i++) {
+  }
+}
+
+void delay(unsigned int t) {
+  unsigned int i = 0;
+  for (; i < t; i++)
+    delay_ms(100);
+}
+
 /*
  * ./ledtest /dev/100ask_led0 on
  * ./ledtest /dev/100ask_led0 off
@@ -33,6 +45,10 @@ int main(int argc, char **argv) {
     status = 0;
   } else {
     status = 2;
+    while (1) {
+      write(fd, &status, 1);
+      delay(50000);
+    }
   }
 
   write(fd, &status, 1);

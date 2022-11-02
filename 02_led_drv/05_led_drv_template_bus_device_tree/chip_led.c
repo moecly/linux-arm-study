@@ -14,13 +14,13 @@
 #include <linux/seq_file.h>
 #include <linux/stat.h>
 #include <linux/tty.h>
+#include <linux/of.h>
 
 #include "asm/io.h"
 #include "led_ops.h"
 #include "led_resource.h"
 #include "leddrv.h"
 #include "linux/ioport.h"
-#include "linux/of.h"
 #include "linux/printk.h"
 
 #define SUCC 0

@@ -5,7 +5,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-
 /*
  * ./ledtest /dev/100ask_led0 on
  * ./ledtest /dev/100ask_led0 off

@@ -10,9 +10,10 @@
 
 typedef struct led_resource {
   int pin;
-  volatile unsigned int *dr;
-  volatile unsigned int *gdir;
-  volatile unsigned int *ccm;
+  volatile unsigned int dr;
+  volatile unsigned int gdir;
+  volatile unsigned char ccm_ccgr;
+  volatile unsigned int iomuxc;
 } led_resource, *p_led_resource;
 
 #endif

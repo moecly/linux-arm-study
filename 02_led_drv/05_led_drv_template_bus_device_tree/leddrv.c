@@ -1,5 +1,3 @@
-#include <linux/module.h>
-
 #include <linux/device.h>
 #include <linux/errno.h>
 #include <linux/fs.h>
@@ -9,6 +7,7 @@
 #include <linux/kmod.h>
 #include <linux/major.h>
 #include <linux/miscdevice.h>
+#include <linux/module.h>
 #include <linux/mutex.h>
 #include <linux/proc_fs.h>
 #include <linux/seq_file.h>
@@ -35,8 +34,7 @@ static p_led_operations p_led_ops;
  * create led dev
  */
 void led_class_create_dev(int minor) {
-  device_create(led_class, NULL, MKDEV(major, minor), NULL, "100ask_led%d",
-                minor);
+  device_create(led_class, NULL, MKDEV(major, minor), NULL, "led%d", minor);
 }
 
 /**
@@ -83,7 +81,11 @@ ssize_t led_write(struct file *file, const char __user *buf, size_t size,
   node = file_inode(file);
   res = copy_from_user(&val, buf, size);
   minor = iminor(node);
-  p_led_ops->ctl(minor, val);
+  if (val == 2) {
+    p_led_ops->toggle(minor);
+  } else {
+    p_led_ops->ctl(minor, val);
+  }
 
   return size;
 

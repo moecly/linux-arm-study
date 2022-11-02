@@ -15,6 +15,7 @@
 #include <linux/stat.h>
 #include <linux/tty.h>
 
+#include "asm/io.h"
 #include "led_ops.h"
 #include "led_resource.h"
 #include "leddrv.h"
@@ -31,26 +32,71 @@ static int g_led_cnt = 0;
 /**
  * init led
  */
-// TODO
 int led_init(int which) {
-  printk("ctl gpio: gruop %d, pin %d\n", GROUP(g_led_resource[which].pin),
+  volatile unsigned char *ccm_ccgr;
+  volatile unsigned int *iomuxc;
+  volatile unsigned int *gdir;
+  ccm_ccgr = ioremap(g_led_resource[which].ccm_ccgr, sizeof(char));
+  iomuxc = ioremap(g_led_resource[which].iomuxc, sizeof(int));
+  gdir = ioremap(g_led_resource[which].gdir, sizeof(int));
+
+  printk("init gpio: gruop %d, pin %d\n", GROUP(g_led_resource[which].pin),
          PIN(g_led_resource[which].pin));
+
+  *iomuxc &= ~0xf;
+  *iomuxc |= 0x5;
+  *gdir |= (1 << PIN(g_led_resource[which].pin));
+
+  iounmap(iomuxc);
+  iounmap(gdir);
   return SUCC;
 }
 
 /**
  * set led status
  */
-// TODO
 int led_ctl(int which, char status) {
+  volatile unsigned int *dr;
+  dr = ioremap(g_led_resource[which].dr, sizeof(int));
+
   printk("ctl gpio: gruop %d, pin %d\n", GROUP(g_led_resource[which].pin),
          PIN(g_led_resource[which].pin));
+
+  if (status) {
+    printk("on.");
+    *dr &= ~(1 << PIN(g_led_resource[which].pin));
+  } else {
+    printk("off.");
+    *dr |= (1 << PIN(g_led_resource[which].pin));
+  }
+
+  iounmap(dr);
+  return SUCC;
+}
+
+/**
+ * toggle led
+ */
+int led_toggle(int which) {
+  volatile unsigned int *dr;
+  int pin;
+  pin = PIN(g_led_resource[which].pin);
+  dr = ioremap(g_led_resource[which].dr, sizeof(int));
+
+  printk("toggle gpio: gruop %d, pin %d\n", GROUP(g_led_resource[which].pin),
+         PIN(g_led_resource[which].pin));
+
+  if (*dr & (1 << pin))
+    *dr &= ~(1 << pin);
+  else
+    *dr |= 1 << pin;
   return SUCC;
 }
 
 led_operations led_ops = {
     .ctl = led_ctl,
     .init = led_init,
+    .toggle = led_toggle,
 };
 
 struct led_operations *get_led_ops(void) {
@@ -79,10 +125,16 @@ int led_drv_probe(struct platform_device *dev) {
   led_res.pin = res;
 
   /* 获取ccm */
-  err = of_property_read_u32(dev_node, "ccm", &res);
+  err = of_property_read_u32(dev_node, "ccm_ccgr", &res);
   if (err == ERR)
     return err;
-  led_res.ccm = res;
+  led_res.ccm_ccgr = res;
+
+  /* 获取iomuxc */
+  err = of_property_read_u32(dev_node, "iomuxc", &res);
+  if (err == ERR)
+    return err;
+  led_res.iomuxc = res;
 
   /* 获取dr */
   err = of_property_read_u32(dev_node, "dr", &res);
@@ -90,7 +142,7 @@ int led_drv_probe(struct platform_device *dev) {
     return err;
   led_res.dr = res;
 
-  /* 获取dr */
+  /* 获取gdir */
   err = of_property_read_u32(dev_node, "gdir", &res);
   if (err == ERR)
     return err;
@@ -122,24 +174,6 @@ int led_drv_remove(struct platform_device *dev) {
   if (err == ERR)
     return err;
   led_res.pin = res;
-
-  /* 获取ccm */
-  err = of_property_read_u32(dev_node, "ccm", &res);
-  if (err == ERR)
-    return err;
-  led_res.ccm = res;
-
-  /* 获取dr */
-  err = of_property_read_u32(dev_node, "dr", &res);
-  if (err == ERR)
-    return err;
-  led_res.dr = res;
-
-  /* 获取dr */
-  err = of_property_read_u32(dev_node, "gdir", &res);
-  if (err == ERR)
-    return err;
-  led_res.gdir = res;
 
   /* 查找要烧毁的设备 */
   for (; i < g_led_cnt; i++) {

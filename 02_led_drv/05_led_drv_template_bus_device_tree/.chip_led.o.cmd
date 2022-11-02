@@ -715,6 +715,24 @@ deps_/linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/chip_led.o := \
   include/linux/tty_ldisc.h \
   include/uapi/linux/tty_flags.h \
   include/uapi/linux/tty.h \
+  arch/arm/include/asm/io.h \
+    $(wildcard include/config/pci.h) \
+    $(wildcard include/config/need/mach/io/h.h) \
+    $(wildcard include/config/pcmcia/soc/common.h) \
+    $(wildcard include/config/isa.h) \
+    $(wildcard include/config/pccard.h) \
+  include/asm-generic/pci_iomap.h \
+    $(wildcard include/config/no/generic/pci/ioport/map.h) \
+    $(wildcard include/config/generic/pci/iomap.h) \
+  include/xen/xen.h \
+    $(wildcard include/config/xen.h) \
+    $(wildcard include/config/xen/dom0.h) \
+    $(wildcard include/config/xen/pvh.h) \
+  include/asm-generic/io.h \
+    $(wildcard include/config/generic/iomap.h) \
+    $(wildcard include/config/has/ioport/map.h) \
+    $(wildcard include/config/virt/to/bus.h) \
+  include/linux/vmalloc.h \
   /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/led_ops.h \
   /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/led_resource.h \
   /linux/drive/02_led_drv/05_led_drv_template_bus_device_tree/leddrv.h \

@@ -5,7 +5,6 @@
 #include <sys/types.h>
 #include <unistd.h>
 
-
 /*
  * ./ledtest /dev/100ask_led0 on
  * ./ledtest /dev/100ask_led0 off
@@ -30,12 +29,13 @@ int main(int argc, char **argv) {
   /* 3. 写文件 */
   if (0 == strcmp(argv[2], "on")) {
     status = 1;
-    write(fd, &status, 1);
-  } else {
+  } else if (0 == strcmp(argv[2], "off")) {
     status = 0;
-    write(fd, &status, 1);
+  } else {
+    status = 2;
   }
 
+  write(fd, &status, 1);
   close(fd);
 
   return 0;

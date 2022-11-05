@@ -1,0 +1,1 @@
+cmd_/linux/drive/05_gpio_and_pinctrl/01_led/led_drv.ko := arm-linux-gnueabihf-ld -EL -r  -T ./scripts/module-common.lds --build-id  -o /linux/drive/05_gpio_and_pinctrl/01_led/led_drv.ko /linux/drive/05_gpio_and_pinctrl/01_led/led_drv.o /linux/drive/05_gpio_and_pinctrl/01_led/led_drv.mod.o ;  true

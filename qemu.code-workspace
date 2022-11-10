@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../bsp/qemu_imx6ull_kernel"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

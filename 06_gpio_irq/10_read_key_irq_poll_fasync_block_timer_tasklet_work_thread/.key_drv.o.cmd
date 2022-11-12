@@ -1,22 +1,17 @@
-cmd_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.o := arm-linux-gnueabihf-gcc -Wp,-MD,/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/.key_drv.o.d -nostdinc -isystem /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include -I./arch/arm/include -I./arch/arm/include/generated/uapi -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types  -DMODULE  -DKBUILD_BASENAME='"key_drv"'  -DKBUILD_MODNAME='"key_drv"' -c -o /linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/.tmp_key_drv.o /linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.c
+cmd_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.o := arm-linux-gnueabihf-gcc -Wp,-MD,/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/.key_drv.o.d -nostdinc -isystem /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include -I./arch/arm/include -I./arch/arm/include/generated/uapi -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types  -DMODULE  -DKBUILD_BASENAME='"key_drv"'  -DKBUILD_MODNAME='"key_drv"' -c -o /linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/.tmp_key_drv.o /linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.c
 
-source_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.o := /linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.c
+source_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.o := /linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.c
 
-deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.o := \
-  include/linux/workqueue.h \
-    $(wildcard include/config/debug/objects/work.h) \
-    $(wildcard include/config/lockdep.h) \
-    $(wildcard include/config/smp.h) \
-    $(wildcard include/config/freezer.h) \
-    $(wildcard include/config/sysfs.h) \
-    $(wildcard include/config/wq/watchdog.h) \
-  include/linux/timer.h \
-    $(wildcard include/config/timer/stats.h) \
-    $(wildcard include/config/debug/objects/timers.h) \
-    $(wildcard include/config/no/hz/common.h) \
-    $(wildcard include/config/hotplug/cpu.h) \
-  include/linux/list.h \
-    $(wildcard include/config/debug/list.h) \
+deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.o := \
+  include/linux/irqreturn.h \
+  arch/arm/include/generated/asm/current.h \
+  include/asm-generic/current.h \
+  include/linux/thread_info.h \
+    $(wildcard include/config/thread/info/in/task.h) \
+    $(wildcard include/config/compat.h) \
+    $(wildcard include/config/debug/stack/usage.h) \
+    $(wildcard include/config/have/arch/within/stack/frames.h) \
+    $(wildcard include/config/hardened/usercopy.h) \
   include/linux/types.h \
     $(wildcard include/config/have/uid16.h) \
     $(wildcard include/config/uid16.h) \
@@ -49,19 +44,12 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/arch/use/builtin/bswap.h) \
   arch/arm/include/uapi/asm/posix_types.h \
   include/uapi/asm-generic/posix_types.h \
-  include/linux/poison.h \
-    $(wildcard include/config/illegal/pointer/value.h) \
-    $(wildcard include/config/page/poisoning/zero.h) \
-  include/uapi/linux/const.h \
-  include/linux/kernel.h \
-    $(wildcard include/config/preempt/voluntary.h) \
-    $(wildcard include/config/debug/atomic/sleep.h) \
-    $(wildcard include/config/mmu.h) \
-    $(wildcard include/config/prove/locking.h) \
-    $(wildcard include/config/panic/timeout.h) \
-    $(wildcard include/config/tracing.h) \
-    $(wildcard include/config/ftrace/mcount/record.h) \
-  /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/7.5.0/include/stdarg.h \
+  include/linux/bug.h \
+    $(wildcard include/config/generic/bug.h) \
+  arch/arm/include/asm/bug.h \
+    $(wildcard include/config/thumb2/kernel.h) \
+    $(wildcard include/config/debug/bugverbose.h) \
+    $(wildcard include/config/arm/lpae.h) \
   include/linux/linkage.h \
   include/linux/stringify.h \
   include/linux/export.h \
@@ -71,6 +59,26 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/trim/unused/ksyms.h) \
     $(wildcard include/config/unused/symbols.h) \
   arch/arm/include/asm/linkage.h \
+  arch/arm/include/asm/opcodes.h \
+    $(wildcard include/config/cpu/endian/be8.h) \
+    $(wildcard include/config/cpu/endian/be32.h) \
+  include/linux/swab.h \
+  include/uapi/linux/swab.h \
+  arch/arm/include/asm/swab.h \
+  arch/arm/include/uapi/asm/swab.h \
+  include/asm-generic/bug.h \
+    $(wildcard include/config/bug.h) \
+    $(wildcard include/config/generic/bug/relative/pointers.h) \
+    $(wildcard include/config/smp.h) \
+  include/linux/kernel.h \
+    $(wildcard include/config/preempt/voluntary.h) \
+    $(wildcard include/config/debug/atomic/sleep.h) \
+    $(wildcard include/config/mmu.h) \
+    $(wildcard include/config/prove/locking.h) \
+    $(wildcard include/config/panic/timeout.h) \
+    $(wildcard include/config/tracing.h) \
+    $(wildcard include/config/ftrace/mcount/record.h) \
+  /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/lib/gcc/arm-linux-gnueabihf/7.5.0/include/stdarg.h \
   include/linux/bitops.h \
   arch/arm/include/asm/bitops.h \
   include/linux/irqflags.h \
@@ -83,9 +91,7 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/cpu/v7m.h) \
   arch/arm/include/asm/ptrace.h \
     $(wildcard include/config/arm/thumb.h) \
-    $(wildcard include/config/thumb2/kernel.h) \
   arch/arm/include/uapi/asm/ptrace.h \
-    $(wildcard include/config/cpu/endian/be8.h) \
   arch/arm/include/asm/hwcap.h \
   arch/arm/include/uapi/asm/hwcap.h \
   include/asm-generic/irqflags.h \
@@ -107,10 +113,6 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
   arch/arm/include/uapi/asm/byteorder.h \
   include/linux/byteorder/little_endian.h \
   include/uapi/linux/byteorder/little_endian.h \
-  include/linux/swab.h \
-  include/uapi/linux/swab.h \
-  arch/arm/include/asm/swab.h \
-  arch/arm/include/uapi/asm/swab.h \
   include/linux/byteorder/generic.h \
   include/asm-generic/bitops/ext2-atomic-setbit.h \
   include/linux/log2.h \
@@ -133,40 +135,11 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
   arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
+  include/linux/dynamic_debug.h \
+    $(wildcard include/config/jump/label.h) \
   arch/arm/include/asm/div64.h \
   arch/arm/include/asm/compiler.h \
   include/asm-generic/div64.h \
-  include/linux/ktime.h \
-  include/linux/time.h \
-    $(wildcard include/config/arch/uses/gettimeoffset.h) \
-  include/linux/seqlock.h \
-    $(wildcard include/config/debug/lock/alloc.h) \
-  include/linux/spinlock.h \
-    $(wildcard include/config/debug/spinlock.h) \
-    $(wildcard include/config/generic/lockbreak.h) \
-    $(wildcard include/config/preempt.h) \
-  include/linux/preempt.h \
-    $(wildcard include/config/preempt/count.h) \
-    $(wildcard include/config/debug/preempt.h) \
-    $(wildcard include/config/preempt/notifiers.h) \
-  arch/arm/include/generated/asm/preempt.h \
-  include/asm-generic/preempt.h \
-  include/linux/thread_info.h \
-    $(wildcard include/config/thread/info/in/task.h) \
-    $(wildcard include/config/compat.h) \
-    $(wildcard include/config/debug/stack/usage.h) \
-    $(wildcard include/config/have/arch/within/stack/frames.h) \
-    $(wildcard include/config/hardened/usercopy.h) \
-  include/linux/bug.h \
-    $(wildcard include/config/generic/bug.h) \
-  arch/arm/include/asm/bug.h \
-    $(wildcard include/config/debug/bugverbose.h) \
-    $(wildcard include/config/arm/lpae.h) \
-  arch/arm/include/asm/opcodes.h \
-    $(wildcard include/config/cpu/endian/be32.h) \
-  include/asm-generic/bug.h \
-    $(wildcard include/config/bug.h) \
-    $(wildcard include/config/generic/bug/relative/pointers.h) \
   arch/arm/include/asm/thread_info.h \
     $(wildcard include/config/crunch.h) \
     $(wildcard include/config/arm/thumbee.h) \
@@ -184,7 +157,7 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/kuser/helpers.h) \
     $(wildcard include/config/have/arch/pfn/valid.h) \
   arch/arm/include/asm/glue.h \
-  arch/arm/include/asm/pgtable-3level-types.h \
+  arch/arm/include/asm/pgtable-2level-types.h \
   arch/arm/include/asm/memory.h \
     $(wildcard include/config/need/mach/memory/h.h) \
     $(wildcard include/config/page/offset.h) \
@@ -196,6 +169,7 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/phys/offset.h) \
     $(wildcard include/config/xip/kernel.h) \
     $(wildcard include/config/xip/phys/addr.h) \
+  include/uapi/linux/const.h \
   include/linux/sizes.h \
   include/asm-generic/memory_model.h \
     $(wildcard include/config/flatmem.h) \
@@ -204,13 +178,51 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/sparsemem.h) \
   include/linux/pfn.h \
   include/asm-generic/getorder.h \
-  include/linux/bottom_half.h \
+  include/linux/device.h \
+    $(wildcard include/config/debug/devres.h) \
+    $(wildcard include/config/srcu.h) \
+    $(wildcard include/config/generic/msi/irq/domain.h) \
+    $(wildcard include/config/pinctrl.h) \
+    $(wildcard include/config/generic/msi/irq.h) \
+    $(wildcard include/config/numa.h) \
+    $(wildcard include/config/dma/cma.h) \
+    $(wildcard include/config/pm/sleep.h) \
+    $(wildcard include/config/of.h) \
+    $(wildcard include/config/devtmpfs.h) \
+    $(wildcard include/config/sysfs/deprecated.h) \
+  include/linux/ioport.h \
+    $(wildcard include/config/memory/hotremove.h) \
+  include/linux/kobject.h \
+    $(wildcard include/config/uevent/helper.h) \
+    $(wildcard include/config/debug/kobject/release.h) \
+  include/linux/list.h \
+    $(wildcard include/config/debug/list.h) \
+  include/linux/poison.h \
+    $(wildcard include/config/illegal/pointer/value.h) \
+    $(wildcard include/config/page/poisoning/zero.h) \
+  include/linux/sysfs.h \
+    $(wildcard include/config/debug/lock/alloc.h) \
+    $(wildcard include/config/sysfs.h) \
+  include/linux/kernfs.h \
+    $(wildcard include/config/kernfs.h) \
+  include/linux/err.h \
+  arch/arm/include/generated/asm/errno.h \
+  include/uapi/asm-generic/errno.h \
+  include/uapi/asm-generic/errno-base.h \
+  include/linux/mutex.h \
+    $(wildcard include/config/debug/mutexes.h) \
+    $(wildcard include/config/mutex/spin/on/owner.h) \
   include/linux/spinlock_types.h \
+    $(wildcard include/config/generic/lockbreak.h) \
+    $(wildcard include/config/debug/spinlock.h) \
   arch/arm/include/asm/spinlock_types.h \
   include/linux/lockdep.h \
+    $(wildcard include/config/lockdep.h) \
     $(wildcard include/config/lock/stat.h) \
   include/linux/rwlock_types.h \
-  arch/arm/include/asm/spinlock.h \
+  include/linux/atomic.h \
+    $(wildcard include/config/generic/atomic64.h) \
+  arch/arm/include/asm/atomic.h \
   include/linux/prefetch.h \
   arch/arm/include/asm/processor.h \
     $(wildcard include/config/have/hw/breakpoint.h) \
@@ -218,6 +230,38 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
   arch/arm/include/asm/hw_breakpoint.h \
   arch/arm/include/asm/unified.h \
     $(wildcard include/config/arm/asm/unified.h) \
+  arch/arm/include/asm/cmpxchg.h \
+    $(wildcard include/config/cpu/sa110.h) \
+    $(wildcard include/config/cpu/v6.h) \
+  include/asm-generic/cmpxchg-local.h \
+  include/asm-generic/atomic-long.h \
+  include/linux/osq_lock.h \
+  include/linux/idr.h \
+  include/linux/rcupdate.h \
+    $(wildcard include/config/tiny/rcu.h) \
+    $(wildcard include/config/tree/rcu.h) \
+    $(wildcard include/config/preempt/rcu.h) \
+    $(wildcard include/config/rcu/trace.h) \
+    $(wildcard include/config/preempt/count.h) \
+    $(wildcard include/config/rcu/stall/common.h) \
+    $(wildcard include/config/no/hz/full.h) \
+    $(wildcard include/config/rcu/nocb/cpu.h) \
+    $(wildcard include/config/tasks/rcu.h) \
+    $(wildcard include/config/debug/objects/rcu/head.h) \
+    $(wildcard include/config/hotplug/cpu.h) \
+    $(wildcard include/config/prove/rcu.h) \
+    $(wildcard include/config/preempt.h) \
+    $(wildcard include/config/rcu/boost.h) \
+    $(wildcard include/config/rcu/nocb/cpu/all.h) \
+    $(wildcard include/config/no/hz/full/sysidle.h) \
+  include/linux/spinlock.h \
+  include/linux/preempt.h \
+    $(wildcard include/config/debug/preempt.h) \
+    $(wildcard include/config/preempt/notifiers.h) \
+  arch/arm/include/generated/asm/preempt.h \
+  include/asm-generic/preempt.h \
+  include/linux/bottom_half.h \
+  arch/arm/include/asm/spinlock.h \
   include/linux/rwlock.h \
   include/linux/spinlock_api_smp.h \
     $(wildcard include/config/inline/spin/lock.h) \
@@ -249,14 +293,28 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/inline/write/unlock/irq.h) \
     $(wildcard include/config/inline/read/unlock/irqrestore.h) \
     $(wildcard include/config/inline/write/unlock/irqrestore.h) \
-  include/linux/atomic.h \
-    $(wildcard include/config/generic/atomic64.h) \
-  arch/arm/include/asm/atomic.h \
-  arch/arm/include/asm/cmpxchg.h \
-    $(wildcard include/config/cpu/sa110.h) \
-    $(wildcard include/config/cpu/v6.h) \
-  include/asm-generic/cmpxchg-local.h \
-  include/asm-generic/atomic-long.h \
+  include/linux/threads.h \
+    $(wildcard include/config/nr/cpus.h) \
+    $(wildcard include/config/base/small.h) \
+  include/linux/cpumask.h \
+    $(wildcard include/config/cpumask/offstack.h) \
+    $(wildcard include/config/debug/per/cpu/maps.h) \
+  include/linux/bitmap.h \
+    $(wildcard include/config/s390.h) \
+  include/linux/string.h \
+    $(wildcard include/config/binary/printf.h) \
+  include/uapi/linux/string.h \
+  arch/arm/include/asm/string.h \
+  include/linux/seqlock.h \
+  include/linux/completion.h \
+  include/linux/wait.h \
+  include/uapi/linux/wait.h \
+  include/linux/debugobjects.h \
+    $(wildcard include/config/debug/objects.h) \
+    $(wildcard include/config/debug/objects/free.h) \
+  include/linux/ktime.h \
+  include/linux/time.h \
+    $(wildcard include/config/arch/uses/gettimeoffset.h) \
   include/linux/math64.h \
     $(wildcard include/config/arch/supports/int128.h) \
   include/linux/time64.h \
@@ -274,83 +332,28 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
   include/linux/timekeeping.h \
   include/linux/errno.h \
   include/uapi/linux/errno.h \
-  arch/arm/include/generated/asm/errno.h \
-  include/uapi/asm-generic/errno.h \
-  include/uapi/asm-generic/errno-base.h \
-  include/linux/debugobjects.h \
-    $(wildcard include/config/debug/objects.h) \
-    $(wildcard include/config/debug/objects/free.h) \
-  include/linux/sysctl.h \
-    $(wildcard include/config/sysctl.h) \
-  include/linux/rcupdate.h \
-    $(wildcard include/config/tiny/rcu.h) \
-    $(wildcard include/config/tree/rcu.h) \
-    $(wildcard include/config/preempt/rcu.h) \
-    $(wildcard include/config/rcu/trace.h) \
-    $(wildcard include/config/rcu/stall/common.h) \
-    $(wildcard include/config/no/hz/full.h) \
-    $(wildcard include/config/rcu/nocb/cpu.h) \
-    $(wildcard include/config/tasks/rcu.h) \
-    $(wildcard include/config/debug/objects/rcu/head.h) \
-    $(wildcard include/config/prove/rcu.h) \
-    $(wildcard include/config/rcu/boost.h) \
-    $(wildcard include/config/rcu/nocb/cpu/all.h) \
-    $(wildcard include/config/no/hz/full/sysidle.h) \
-  include/linux/threads.h \
-    $(wildcard include/config/nr/cpus.h) \
-    $(wildcard include/config/base/small.h) \
-  include/linux/cpumask.h \
-    $(wildcard include/config/cpumask/offstack.h) \
-    $(wildcard include/config/debug/per/cpu/maps.h) \
-  include/linux/bitmap.h \
-    $(wildcard include/config/s390.h) \
-  include/linux/string.h \
-    $(wildcard include/config/binary/printf.h) \
-  include/uapi/linux/string.h \
-  arch/arm/include/asm/string.h \
-  include/linux/completion.h \
-  include/linux/wait.h \
-  arch/arm/include/generated/asm/current.h \
-  include/asm-generic/current.h \
-  include/uapi/linux/wait.h \
   include/linux/rcutree.h \
   include/linux/rbtree.h \
-  include/linux/uidgid.h \
-    $(wildcard include/config/multiuser.h) \
-    $(wildcard include/config/user/ns.h) \
-  include/linux/highuid.h \
-  include/uapi/linux/sysctl.h \
-  include/linux/device.h \
-    $(wildcard include/config/debug/devres.h) \
-    $(wildcard include/config/srcu.h) \
-    $(wildcard include/config/generic/msi/irq/domain.h) \
-    $(wildcard include/config/pinctrl.h) \
-    $(wildcard include/config/generic/msi/irq.h) \
-    $(wildcard include/config/numa.h) \
-    $(wildcard include/config/dma/cma.h) \
-    $(wildcard include/config/pm/sleep.h) \
-    $(wildcard include/config/of.h) \
-    $(wildcard include/config/devtmpfs.h) \
-    $(wildcard include/config/sysfs/deprecated.h) \
-  include/linux/ioport.h \
-    $(wildcard include/config/memory/hotremove.h) \
-  include/linux/kobject.h \
-    $(wildcard include/config/uevent/helper.h) \
-    $(wildcard include/config/debug/kobject/release.h) \
-  include/linux/sysfs.h \
-  include/linux/kernfs.h \
-    $(wildcard include/config/kernfs.h) \
-  include/linux/err.h \
-  include/linux/mutex.h \
-    $(wildcard include/config/debug/mutexes.h) \
-    $(wildcard include/config/mutex/spin/on/owner.h) \
-  include/linux/osq_lock.h \
-  include/linux/idr.h \
   include/linux/kobject_ns.h \
   include/linux/stat.h \
   arch/arm/include/uapi/asm/stat.h \
   include/uapi/linux/stat.h \
+  include/linux/uidgid.h \
+    $(wildcard include/config/multiuser.h) \
+    $(wildcard include/config/user/ns.h) \
+  include/linux/highuid.h \
   include/linux/kref.h \
+  include/linux/workqueue.h \
+    $(wildcard include/config/debug/objects/work.h) \
+    $(wildcard include/config/freezer.h) \
+    $(wildcard include/config/wq/watchdog.h) \
+  include/linux/timer.h \
+    $(wildcard include/config/timer/stats.h) \
+    $(wildcard include/config/debug/objects/timers.h) \
+    $(wildcard include/config/no/hz/common.h) \
+  include/linux/sysctl.h \
+    $(wildcard include/config/sysctl.h) \
+  include/uapi/linux/sysctl.h \
   include/linux/klist.h \
   include/linux/pinctrl/devinfo.h \
     $(wildcard include/config/pm.h) \
@@ -656,6 +659,8 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
   include/linux/interrupt.h \
     $(wildcard include/config/irq/forced/threading.h) \
     $(wildcard include/config/generic/irq/probe.h) \
+  include/linux/irqnr.h \
+  include/uapi/linux/irqnr.h \
   include/linux/hardirq.h \
   include/linux/ftrace_irq.h \
     $(wildcard include/config/ftrace/nmi/enter.h) \
@@ -665,15 +670,11 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/context/tracking.h) \
   include/linux/static_key.h \
   include/linux/jump_label.h \
-    $(wildcard include/config/jump/label.h) \
   arch/arm/include/asm/hardirq.h \
   arch/arm/include/asm/irq.h \
     $(wildcard include/config/sparse/irq.h) \
     $(wildcard include/config/multi/irq/handler.h) \
   include/linux/irq_cpustat.h \
-  include/linux/irqnr.h \
-  include/uapi/linux/irqnr.h \
-  include/linux/irqreturn.h \
   include/linux/irq.h \
     $(wildcard include/config/generic/irq/ipi.h) \
     $(wildcard include/config/irq/domain/hierarchy.h) \
@@ -819,6 +820,6 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
   include/uapi/linux/tty_flags.h \
   include/uapi/linux/tty.h \
 
-/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.o: $(deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.o)
+/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.o: $(deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.o)
 
-$(deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_work/key_drv.o):
+$(deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.o):

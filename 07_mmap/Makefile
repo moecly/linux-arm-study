@@ -7,21 +7,15 @@
 # 注意: 不同的开发板不同的编译器上述3个环境变量不一定相同,
 #       请参考各开发板的高级用户使用手册
 
-KERN_DIR = /linux/bsp/imx-linux4.9.88# 板子所用内核源码的目录
+KERN_DIR = /linux/bsp/qemu_imx6ull_kernel
 
 all:
 	make -C $(KERN_DIR) M=`pwd` modules 
-	$(CROSS_COMPILE)gcc -o button_test button_test.c 
+	$(CROSS_COMPILE)gcc -o hello_drv_test hello_drv_test.c 
 
 clean:
 	make -C $(KERN_DIR) M=`pwd` modules clean
 	rm -rf modules.order
+	rm -f hello_drv_test
 
-# 参考内核源码drivers/char/ipmi/Makefile
-# 要想把a.c, b.c编译成ab.ko, 可以这样指定:
-# ab-y := a.o b.o
-# obj-m += ab.o
-
-
-
-obj-m += key_drv.o
+obj-m	+= hello_drv.o

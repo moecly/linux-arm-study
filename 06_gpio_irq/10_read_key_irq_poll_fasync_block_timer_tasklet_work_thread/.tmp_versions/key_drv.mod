@@ -1,0 +1,3 @@
+/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.ko
+/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.o
+

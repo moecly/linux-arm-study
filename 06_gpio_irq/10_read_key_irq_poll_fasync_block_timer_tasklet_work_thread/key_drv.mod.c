@@ -21,19 +21,19 @@ MODULE_INFO(retpoline, "Y");
 static const struct modversion_info ____versions[]
 __used
 __attribute__((section("__versions"))) = {
-	{ 0x9a454969, __VMLINUX_SYMBOL_STR(module_layout) },
-	{ 0x762124b9, __VMLINUX_SYMBOL_STR(platform_driver_unregister) },
-	{ 0x8b93010a, __VMLINUX_SYMBOL_STR(__platform_driver_register) },
-	{ 0x7c6db3b0, __VMLINUX_SYMBOL_STR(device_create) },
-	{ 0x9fb4c6bd, __VMLINUX_SYMBOL_STR(__class_create) },
-	{ 0xcc432362, __VMLINUX_SYMBOL_STR(__register_chrdev) },
+	{ 0x3cb79823, __VMLINUX_SYMBOL_STR(module_layout) },
+	{ 0xd6c4624b, __VMLINUX_SYMBOL_STR(platform_driver_unregister) },
+	{ 0xd49c9dee, __VMLINUX_SYMBOL_STR(__platform_driver_register) },
+	{ 0xb678eb47, __VMLINUX_SYMBOL_STR(device_create) },
+	{ 0x52bfdf34, __VMLINUX_SYMBOL_STR(__class_create) },
+	{ 0xbd725d69, __VMLINUX_SYMBOL_STR(__register_chrdev) },
 	{ 0xd6b8e852, __VMLINUX_SYMBOL_STR(request_threaded_irq) },
 	{ 0x62451f4, __VMLINUX_SYMBOL_STR(add_timer) },
 	{ 0x9545af6d, __VMLINUX_SYMBOL_STR(tasklet_init) },
 	{ 0x5ee52022, __VMLINUX_SYMBOL_STR(init_timer_key) },
-	{ 0x5278a4fb, __VMLINUX_SYMBOL_STR(gpiod_to_irq) },
-	{ 0xf0f4ffad, __VMLINUX_SYMBOL_STR(gpio_to_desc) },
-	{ 0xba3179a6, __VMLINUX_SYMBOL_STR(of_get_named_gpio_flags) },
+	{ 0x1b694d4f, __VMLINUX_SYMBOL_STR(gpiod_to_irq) },
+	{ 0x530224b5, __VMLINUX_SYMBOL_STR(gpio_to_desc) },
+	{ 0xdc17d938, __VMLINUX_SYMBOL_STR(of_get_named_gpio_flags) },
 	{ 0x12da5bb2, __VMLINUX_SYMBOL_STR(__kmalloc) },
 	{ 0xa38caae0, __VMLINUX_SYMBOL_STR(mod_timer) },
 	{ 0x7d11c268, __VMLINUX_SYMBOL_STR(jiffies) },
@@ -46,18 +46,18 @@ __attribute__((section("__versions"))) = {
 	{ 0x344b7739, __VMLINUX_SYMBOL_STR(prepare_to_wait_event) },
 	{ 0x1000e51, __VMLINUX_SYMBOL_STR(schedule) },
 	{ 0x622598b1, __VMLINUX_SYMBOL_STR(init_wait_entry) },
-	{ 0xc031c111, __VMLINUX_SYMBOL_STR(fasync_helper) },
+	{ 0xf26996bb, __VMLINUX_SYMBOL_STR(fasync_helper) },
 	{ 0x37a0cba, __VMLINUX_SYMBOL_STR(kfree) },
 	{ 0x6bc3fbc0, __VMLINUX_SYMBOL_STR(__unregister_chrdev) },
-	{ 0x7701869e, __VMLINUX_SYMBOL_STR(class_destroy) },
-	{ 0x76596166, __VMLINUX_SYMBOL_STR(device_destroy) },
+	{ 0x77d800a2, __VMLINUX_SYMBOL_STR(class_destroy) },
+	{ 0x87ffdb4a, __VMLINUX_SYMBOL_STR(device_destroy) },
 	{ 0x82072614, __VMLINUX_SYMBOL_STR(tasklet_kill) },
 	{ 0x5c2e3421, __VMLINUX_SYMBOL_STR(del_timer) },
 	{ 0xf20dabd8, __VMLINUX_SYMBOL_STR(free_irq) },
-	{ 0xdbb1beb5, __VMLINUX_SYMBOL_STR(of_count_phandle_with_args) },
-	{ 0xce9ef1a7, __VMLINUX_SYMBOL_STR(kill_fasync) },
+	{ 0x5a658f4f, __VMLINUX_SYMBOL_STR(of_count_phandle_with_args) },
+	{ 0xb8c7d6dd, __VMLINUX_SYMBOL_STR(kill_fasync) },
 	{ 0xd85cd67e, __VMLINUX_SYMBOL_STR(__wake_up) },
-	{ 0x763e342d, __VMLINUX_SYMBOL_STR(gpiod_get_value) },
+	{ 0x8f22d2ef, __VMLINUX_SYMBOL_STR(gpiod_get_value) },
 	{ 0xefd6cf06, __VMLINUX_SYMBOL_STR(__aeabi_unwind_cpp_pr0) },
 	{ 0x27e1a049, __VMLINUX_SYMBOL_STR(printk) },
 };
@@ -67,5 +67,3 @@ __used
 __attribute__((section(".modinfo"))) =
 "depends=";
 
-
-MODULE_INFO(srcversion, "7C37A9385F703BCCBE6F1AE");

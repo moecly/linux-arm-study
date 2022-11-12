@@ -656,6 +656,9 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
   include/linux/interrupt.h \
     $(wildcard include/config/irq/forced/threading.h) \
     $(wildcard include/config/generic/irq/probe.h) \
+  include/linux/irqreturn.h \
+  include/linux/irqnr.h \
+  include/uapi/linux/irqnr.h \
   include/linux/hardirq.h \
   include/linux/ftrace_irq.h \
     $(wildcard include/config/ftrace/nmi/enter.h) \
@@ -671,9 +674,6 @@ deps_/linux/drive/06_gpio_irq/09_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/sparse/irq.h) \
     $(wildcard include/config/multi/irq/handler.h) \
   include/linux/irq_cpustat.h \
-  include/linux/irqnr.h \
-  include/uapi/linux/irqnr.h \
-  include/linux/irqreturn.h \
   include/linux/irq.h \
     $(wildcard include/config/generic/irq/ipi.h) \
     $(wildcard include/config/irq/domain/hierarchy.h) \

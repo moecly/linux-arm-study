@@ -135,7 +135,7 @@ static void key_task_func(unsigned long data) {
 }
 
 static void key_work_func(struct work_struct *work) {
-  struct gpio_key *gpio_key = container_of(work, struct gpio_key, work);
+  p_gpio_keys gpio_key = container_of(work, struct gpio_key, work);
   int val;
 
   val = gpiod_get_value(gpio_key->gpiod);

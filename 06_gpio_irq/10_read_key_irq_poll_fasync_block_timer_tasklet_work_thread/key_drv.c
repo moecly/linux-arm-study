@@ -1,3 +1,4 @@
+#include "linux/irqreturn.h"
 #include <asm/current.h>
 #include <linux/device.h>
 #include <linux/errno.h>
@@ -74,7 +75,7 @@ static irqreturn_t keys_irq(int irq, void *dev_id) {
   tasklet_schedule(&pkeys->key_task);
   schedule_work(&pkeys->key_work);
   mod_timer(&pkeys->key_timer, jiffies + HZ / 50);
-  return IRQ_HANDLED;
+  return IRQ_WAKE_THREAD;
 }
 
 static ssize_t keys_read(struct file *file, char __user *buf, size_t size,
@@ -146,6 +147,17 @@ static void key_work_func(struct work_struct *work) {
   printk("key_work_func key %d %d\n", pkey->gpio, val);
 }
 
+static irqreturn_t keys_thread_irq(int irq, void *dev_id) {
+  p_gpio_keys pkey = (p_gpio_keys)dev_id;
+  int val = gpiod_get_value(pkey->desc);
+
+  printk("keys_thread_irq: the process is %s pid %d\n", current->comm,
+         current->pid);
+  printk("keys_thread_irq: key %d %d\n", pkey->gpio, val);
+
+  return IRQ_HANDLED;
+}
+
 static int keys_probe(struct platform_device *pdev) {
   int i = 0;
   int count;
@@ -170,15 +182,18 @@ static int keys_probe(struct platform_device *pdev) {
     g_p_keys[i].desc = gpio_to_desc(g_p_keys[i].gpio);
     g_p_keys[i].irq = gpio_to_irq(g_p_keys[i].gpio);
     g_p_keys[i].flags = flags & OF_GPIO_ACTIVE_LOW;
-    setup_timer(&g_p_keys[i].key_timer, key_timer_expire, &g_p_keys[i]);
+    setup_timer(&g_p_keys[i].key_timer, key_timer_expire, (unsigned long)&g_p_keys[i]);
     g_p_keys[i].key_timer.expires = ~0;
-    tasklet_init(&g_p_keys[i].key_task, key_task_func, &g_p_keys[i]);
+    tasklet_init(&g_p_keys[i].key_task, key_task_func, (unsigned long)&g_p_keys[i]);
     add_timer(&g_p_keys[i].key_timer);
     INIT_WORK(&g_p_keys[i].key_work, key_work_func);
 
-    ret = request_irq(g_p_keys[i].irq, keys_irq,
-                      IRQF_TRIGGER_RISING | IRQF_TRIGGER_FALLING, "imx_keys",
-                      &g_p_keys[i]);
+    // ret = request_irq(g_p_keys[i].irq, keys_irq,
+    //                   IRQF_TRIGGER_RISING | IRQF_TRIGGER_FALLING, "imx_keys",
+    //                   &g_p_keys[i]);
+    ret = request_threaded_irq(g_p_keys[i].irq, keys_irq, keys_thread_irq,
+                               IRQF_TRIGGER_RISING | IRQF_TRIGGER_FALLING,
+                               "imx_keys", &g_p_keys[i]);
 
     if (ret)
       goto out;

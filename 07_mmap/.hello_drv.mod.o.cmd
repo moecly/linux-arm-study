@@ -1,8 +1,8 @@
-cmd_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.o := arm-linux-gnueabihf-gcc -Wp,-MD,/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/.key_drv.mod.o.d -nostdinc -isystem /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include -I./arch/arm/include -I./arch/arm/include/generated/uapi -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-var-tracking-assignments -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types  -DKBUILD_BASENAME='"key_drv.mod"'  -DKBUILD_MODNAME='"key_drv"' -DMODULE  -c -o /linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.o /linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.c
+cmd_/linux/drive/07_mmap/hello_drv.mod.o := arm-linux-gnueabihf-gcc -Wp,-MD,/linux/drive/07_mmap/.hello_drv.mod.o.d -nostdinc -isystem /linux/bsp/gcc-linaro-7.5.0-2019.12-x86_64_arm-linux-gnueabihf/bin/../lib/gcc/arm-linux-gnueabihf/7.5.0/include -I./arch/arm/include -I./arch/arm/include/generated/uapi -I./arch/arm/include/generated  -I./include -I./arch/arm/include/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -mlittle-endian -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -fno-dwarf2-cfi-asm -fno-ipa-sra -mabi=aapcs-linux -mno-thumb-interwork -mfpu=vfp -funwind-tables -marm -D__LINUX_ARM_ARCH__=7 -march=armv7-a -msoft-float -Uarm -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -Wframe-larger-than=1024 -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fomit-frame-pointer -fno-var-tracking-assignments -g -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fno-stack-check -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types  -DKBUILD_BASENAME='"hello_drv.mod"'  -DKBUILD_MODNAME='"hello_drv"' -DMODULE  -c -o /linux/drive/07_mmap/hello_drv.mod.o /linux/drive/07_mmap/hello_drv.mod.c
 
-source_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.o := /linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.c
+source_/linux/drive/07_mmap/hello_drv.mod.o := /linux/drive/07_mmap/hello_drv.mod.c
 
-deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.o := \
+deps_/linux/drive/07_mmap/hello_drv.mod.o := \
     $(wildcard include/config/module/unload.h) \
   include/linux/module.h \
     $(wildcard include/config/modules.h) \
@@ -133,8 +133,6 @@ deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_wo
   arch/arm/include/asm/cache.h \
     $(wildcard include/config/arm/l1/cache/shift.h) \
     $(wildcard include/config/aeabi.h) \
-  include/linux/dynamic_debug.h \
-    $(wildcard include/config/jump/label.h) \
   arch/arm/include/asm/div64.h \
   arch/arm/include/asm/compiler.h \
   include/asm-generic/div64.h \
@@ -187,7 +185,7 @@ deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/kuser/helpers.h) \
     $(wildcard include/config/have/arch/pfn/valid.h) \
   arch/arm/include/asm/glue.h \
-  arch/arm/include/asm/pgtable-2level-types.h \
+  arch/arm/include/asm/pgtable-3level-types.h \
   arch/arm/include/asm/memory.h \
     $(wildcard include/config/need/mach/memory/h.h) \
     $(wildcard include/config/page/offset.h) \
@@ -436,6 +434,7 @@ deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_wo
     $(wildcard include/config/ia64.h) \
     $(wildcard include/config/ppc64.h) \
   include/linux/jump_label.h \
+    $(wildcard include/config/jump/label.h) \
   include/linux/extable.h \
   include/linux/rbtree_latch.h \
   arch/arm/include/asm/module.h \
@@ -448,6 +447,6 @@ deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_wo
   include/linux/vermagic.h \
   include/generated/utsrelease.h \
 
-/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.o: $(deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.o)
+/linux/drive/07_mmap/hello_drv.mod.o: $(deps_/linux/drive/07_mmap/hello_drv.mod.o)
 
-$(deps_/linux/drive/06_gpio_irq/10_read_key_irq_poll_fasync_block_timer_tasklet_work_thread/key_drv.mod.o):
+$(deps_/linux/drive/07_mmap/hello_drv.mod.o):
